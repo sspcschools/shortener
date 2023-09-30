@@ -19,10 +19,18 @@ function shortenUrl() {
       long_url: longUrl
     })
   })
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
   .then(data => {
     const shortUrl = data.link;
     document.getElementById('shortUrl').innerHTML = `<strong>Shortened URL:</strong> <a href="${shortUrl}" target="_blank">${shortUrl}</a>`;
   })
-  .catch(error => console.error('Error:', error));
+  .catch(error => {
+    document.getElementById('shortUrl').innerHTML = `Error: ${error.message}`;
+    console.error('Error:', error);
+  });
 }
