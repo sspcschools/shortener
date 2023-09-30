@@ -1,0 +1,28 @@
+function shortenUrl() {
+  const longUrl = document.getElementById('longUrl').value;
+  const accessToken = '47ca96c9161824368d379d767d2b8ef50b527902';
+
+  if (!longUrl || !accessToken) {
+    alert('Please enter a URL and access token.');
+    return;
+  }
+
+  const apiUrl = 'https://api-ssl.bitly.com/v4/shorten';
+
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${accessToken}`
+    },
+    body: JSON.stringify({
+      long_url: longUrl
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    const shortUrl = data.link;
+    document.getElementById('shortUrl').innerHTML = `<strong>Shortened URL:</strong> <a href="${shortUrl}" target="_blank">${shortUrl}</a>`;
+  })
+  .catch(error => console.error('Error:', error));
+}
