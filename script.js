@@ -1,3 +1,9 @@
+function handleKeyPress(event) {
+  if (event.key === 'Enter') {
+    shortenUrl();
+  }
+}
+
 function shortenUrl() {
   const longUrl = document.getElementById('longUrl').value;
   const customSlug = document.getElementById('customSlug').value;
