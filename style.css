@@ -32,3 +32,18 @@ button:hover {
   margin-top: 20px;
   color: #FF4500; /* Orange-Red */
 }
+
+.taskbar {
+  background-color: #FFD700; /* Yellow */
+  padding: 10px;
+}
+
+.taskbar a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.taskbar a:hover {
+  color: #FF4500; /* Orange-Red on hover */
+}
