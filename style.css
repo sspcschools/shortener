@@ -47,3 +47,14 @@ button:hover {
 .taskbar a:hover {
   color: #FF4500; /* Orange-Red on hover */
 }
+
+.announcement {
+  background-color: #FFA500; /* Orange */
+  padding: 10px;
+  text-align: center;
+}
+
+.announcement p {
+  margin: 0;
+  color: #fff;
+}
