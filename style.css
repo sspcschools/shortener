@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFFFE0; /* Pale yellow background */
+  padding: 20px;
+}
+
+h1 {
+  color: #FFD700; /* Yellow */
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #FFD700; /* Yellow border */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #FFD700; /* Yellow */
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FFC700; /* Slightly darker yellow on hover */
+}
+
+#shortUrl {
+  margin-top: 20px;
+  color: #FF4500; /* Orange-Red */
+}
