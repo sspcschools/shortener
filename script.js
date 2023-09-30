@@ -16,8 +16,12 @@ function shortenUrl() {
 
   let apiUrl = 'https://api-ssl.bitly.com/v4/shorten';
 
+  const requestBody = {
+    long_url: longUrl
+  };
+
   if (customSlug) {
-    apiUrl += `?custom_bitlink=${encodeURIComponent(customSlug)}`;
+    requestBody.custom_bitlink = customSlug;
   }
 
   fetch(apiUrl, {
@@ -26,9 +30,7 @@ function shortenUrl() {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${accessToken}`
     },
-    body: JSON.stringify({
-      long_url: longUrl
-    })
+    body: JSON.stringify(requestBody)
   })
   .then(response => response.json())
   .then(data => {
