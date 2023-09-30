@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFCE0; /* Light yellow-ish background */
+    color: #333; /* Dark text color */
+    padding: 20px;
+}
+
+div {
+    border: 2px solid #FFD700; /* Border color similar to yellow */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: #FF4500; /* Dark orange link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
